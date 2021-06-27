@@ -1,0 +1,68 @@
+﻿<Window x:Name="Main_Window" x:Class="SecureSessionGaming.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SecureSessionGaming"
+        mc:Ignorable="d"
+        Title="Secure Session Gaming"
+        Height="547"
+        Width="810"
+        ResizeMode="CanMinimize"
+        ScrollViewer.VerticalScrollBarVisibility="Disabled"
+        Icon="icon.ico"
+        Closing="MainWindow_Closing">
+
+    <Grid Margin="0,0,0,0">
+
+        <!-- Games -->
+        <GroupBox Header="Game" HorizontalAlignment="Left" Height="88" Margin="27,21,0,0" VerticalAlignment="Top" Width="298" FontSize="18" FontWeight="Bold"/>
+        <ComboBox x:Name="uiComboBoxGameSelector" HorizontalAlignment="Left" Margin="50,63,0,0" VerticalAlignment="Top" Width="251"/>
+
+        <!-- how To -->
+        <GroupBox Header="How To" HorizontalAlignment="Left" Height="116" Margin="27,121,0,0" VerticalAlignment="Top" Width="298" FontSize="18" FontWeight="Bold"/>
+        <Label Content="1. Turn on Secure Session.&#xA;2. Create an online game." Foreground="#404040" VerticalContentAlignment="Center" Margin="50,163,0,0" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Width="251"/>
+
+        <!-- Admin -->
+
+        <TextBlock x:Name="uiLabelAdmin" HorizontalAlignment="Left" Margin="393,20,0,0" TextWrapping="Wrap" Text="Please start this application as an Administrator to secure your game" VerticalAlignment="Top" Width="386" Height="60" FontSize="20" Foreground="Red" Focusable="True" FontWeight="Bold" TextAlignment="Center" Visibility="Hidden"/>
+
+        <!-- Secure-->
+        <Button x:Name="uiButtonStatus" Content="Secure" HorizontalAlignment="Left" Margin="477,121,0,0" VerticalAlignment="Top" Width="238" Height="72" FontSize="36" FontWeight="Bold" Cursor="Hand" Click="uiButtonStatus_Click"/>
+        <Label x:Name="uiLabelSession" Background="#FFC81A2B" Content="Not Secure" HorizontalAlignment="Left" Margin="477,230,0,0" VerticalAlignment="Top" Height="71" Width="238" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+
+
+        <!-- Log -->
+        <GroupBox Header="Info / Error" HorizontalAlignment="Left" Height="244" Margin="27,249,0,0" VerticalAlignment="Top" Width="369" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <GroupBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.154"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.497"/>
+                </TransformGroup>
+            </GroupBox.RenderTransform>
+        </GroupBox>
+        <TextBox x:Name="uiTextBoxLog" HorizontalAlignment="Left" Height="199" Margin="50,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321" Cursor="" IsReadOnly="True"/>
+
+        <!-- Made-->
+        <Label Content="Made by Castiel Kenobi" HorizontalAlignment="Left" Margin="408,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.496,0.554" Width="140" Height="25" Foreground="#404040"/>
+        <Label Margin="408,387,177,75">
+            <Hyperlink NavigateUri="http://castielkenobi.com" RequestNavigate="Hyperlink_RequestNavigate">
+                <InlineUIContainer>
+                    <TextBlock Text="http://castielkenobi.com" Width="130" Height="25" />
+                </InlineUIContainer>
+            </Hyperlink>
+        </Label>
+        <Label Content="Check latest version at:" HorizontalAlignment="Left" Margin="408,437,0,0" VerticalAlignment="Top" Width="135" Foreground="#404040" Height="26"/>
+        <Label Margin="408,456,25,18">
+            <Hyperlink NavigateUri="http://github.com/castielkenobi/SecureSessionGaming" RequestNavigate="Hyperlink_RequestNavigate">
+                <InlineUIContainer>
+                    <TextBlock Text="http://github.com/castielkenobi/SecureSessionGaming" Width="277" Height="26" />
+                </InlineUIContainer>
+            </Hyperlink>
+        </Label>
+
+    </Grid>
+</Window>

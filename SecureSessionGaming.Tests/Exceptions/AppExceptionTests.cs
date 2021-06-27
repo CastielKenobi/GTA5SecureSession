@@ -1,0 +1,3 @@
+﻿namespace SecureSessionGaming.Tests.Exceptions
+{
+}

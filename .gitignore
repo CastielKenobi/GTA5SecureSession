@@ -1,0 +1,7 @@
+# compiled code
+bin
+obj
+
+# Tests
+packages/MSTest*
+packages/Microsoft.*
