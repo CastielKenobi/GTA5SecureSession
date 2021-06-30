@@ -1,0 +1,13 @@
+# default
+bin
+obj
+
+# editor
+.vs
+
+# packages
+packages/MSTest*
+packages/*Test.Sdk*
+packages/Microsoft.*Test.Sdk*
+packages/Microsoft.*TestPlatform*
+packages/Microsoft.*CodeCoverage*
